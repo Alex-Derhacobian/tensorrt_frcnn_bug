@@ -1,0 +1,817 @@
+&&&& RUNNING TensorRT.trtexec [TensorRT v8001] # ./trtexec --onnx=/future/u/alexder/faster-rcnn/trt_port/faster_rcnn.onnx --verbose
+[08/02/2021-15:11:54] [I] === Model Options ===
+[08/02/2021-15:11:54] [I] Format: ONNX
+[08/02/2021-15:11:54] [I] Model: /future/u/alexder/faster-rcnn/trt_port/faster_rcnn.onnx
+[08/02/2021-15:11:54] [I] Output:
+[08/02/2021-15:11:54] [I] === Build Options ===
+[08/02/2021-15:11:54] [I] Max batch: explicit
+[08/02/2021-15:11:54] [I] Workspace: 16 MiB
+[08/02/2021-15:11:54] [I] minTiming: 1
+[08/02/2021-15:11:54] [I] avgTiming: 8
+[08/02/2021-15:11:54] [I] Precision: FP32
+[08/02/2021-15:11:54] [I] Calibration: 
+[08/02/2021-15:11:54] [I] Refit: Disabled
+[08/02/2021-15:11:54] [I] Sparsity: Disabled
+[08/02/2021-15:11:54] [I] Safe mode: Disabled
+[08/02/2021-15:11:54] [I] Restricted mode: Disabled
+[08/02/2021-15:11:54] [I] Save engine: 
+[08/02/2021-15:11:54] [I] Load engine: 
+[08/02/2021-15:11:54] [I] NVTX verbosity: 0
+[08/02/2021-15:11:54] [I] Tactic sources: Using default tactic sources
+[08/02/2021-15:11:54] [I] timingCacheMode: local
+[08/02/2021-15:11:54] [I] timingCacheFile: 
+[08/02/2021-15:11:54] [I] Input(s)s format: fp32:CHW
+[08/02/2021-15:11:54] [I] Output(s)s format: fp32:CHW
+[08/02/2021-15:11:54] [I] Input build shapes: model
+[08/02/2021-15:11:54] [I] Input calibration shapes: model
+[08/02/2021-15:11:54] [I] === System Options ===
+[08/02/2021-15:11:54] [I] Device: 0
+[08/02/2021-15:11:54] [I] DLACore: 
+[08/02/2021-15:11:54] [I] Plugins:
+[08/02/2021-15:11:54] [I] === Inference Options ===
+[08/02/2021-15:11:54] [I] Batch: Explicit
+[08/02/2021-15:11:54] [I] Input inference shapes: model
+[08/02/2021-15:11:54] [I] Iterations: 10
+[08/02/2021-15:11:54] [I] Duration: 3s (+ 200ms warm up)
+[08/02/2021-15:11:54] [I] Sleep time: 0ms
+[08/02/2021-15:11:54] [I] Streams: 1
+[08/02/2021-15:11:54] [I] ExposeDMA: Disabled
+[08/02/2021-15:11:54] [I] Data transfers: Enabled
+[08/02/2021-15:11:54] [I] Spin-wait: Disabled
+[08/02/2021-15:11:54] [I] Multithreading: Disabled
+[08/02/2021-15:11:54] [I] CUDA Graph: Disabled
+[08/02/2021-15:11:54] [I] Separate profiling: Disabled
+[08/02/2021-15:11:54] [I] Time Deserialize: Disabled
+[08/02/2021-15:11:54] [I] Time Refit: Disabled
+[08/02/2021-15:11:54] [I] Skip inference: Disabled
+[08/02/2021-15:11:54] [I] Inputs:
+[08/02/2021-15:11:54] [I] === Reporting Options ===
+[08/02/2021-15:11:54] [I] Verbose: Enabled
+[08/02/2021-15:11:54] [I] Averages: 10 inferences
+[08/02/2021-15:11:54] [I] Percentile: 99
+[08/02/2021-15:11:54] [I] Dump refittable layers:Disabled
+[08/02/2021-15:11:54] [I] Dump output: Disabled
+[08/02/2021-15:11:54] [I] Profile: Disabled
+[08/02/2021-15:11:54] [I] Export timing to JSON file: 
+[08/02/2021-15:11:54] [I] Export output to JSON file: 
+[08/02/2021-15:11:54] [I] Export profile to JSON file: 
+[08/02/2021-15:11:54] [I] 
+[08/02/2021-15:12:02] [I] === Device Information ===
+[08/02/2021-15:12:02] [I] Selected Device: TITAN X (Pascal)
+[08/02/2021-15:12:02] [I] Compute Capability: 6.1
+[08/02/2021-15:12:02] [I] SMs: 28
+[08/02/2021-15:12:02] [I] Compute Clock Rate: 1.531 GHz
+[08/02/2021-15:12:02] [I] Device Global Memory: 12196 MiB
+[08/02/2021-15:12:02] [I] Shared Memory per SM: 96 KiB
+[08/02/2021-15:12:02] [I] Memory Bus Width: 384 bits (ECC disabled)
+[08/02/2021-15:12:02] [I] Memory Clock Rate: 5.005 GHz
+[08/02/2021-15:12:02] [I] 
+[08/02/2021-15:12:02] [I] TensorRT version: 8001
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::GridAnchor_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::GridAnchorRect_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::NMS_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::Reorg_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::Region_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::Clip_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::LReLU_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::PriorBox_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::Normalize_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::ScatterND version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::RPROI_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::BatchedNMS_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::BatchedNMSDynamic_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::FlattenConcat_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::CropAndResize version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::DetectionLayer_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::EfficientNMS_ONNX_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::EfficientNMS_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::Proposal version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::ProposalLayer_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::PyramidROIAlign_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::ResizeNearest_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::Split version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::SpecialSlice_TRT version 1
+[08/02/2021-15:12:02] [V] [TRT] Registered plugin creator - ::InstanceNormalization_TRT version 1
+[08/02/2021-15:12:03] [I] [TRT] [MemUsageChange] Init CUDA: CPU +162, GPU +0, now: CPU 168, GPU 8690 (MiB)
+[08/02/2021-15:12:03] [I] Start parsing network model
+[08/02/2021-15:12:04] [I] [TRT] ----------------------------------------------------------------
+[08/02/2021-15:12:04] [I] [TRT] Input filename:   /future/u/alexder/faster-rcnn/trt_port/faster_rcnn.onnx
+[08/02/2021-15:12:04] [I] [TRT] ONNX IR version:  0.0.6
+[08/02/2021-15:12:04] [I] [TRT] Opset version:    11
+[08/02/2021-15:12:04] [I] [TRT] Producer name:    pytorch
+[08/02/2021-15:12:04] [I] [TRT] Producer version: 1.9
+[08/02/2021-15:12:04] [I] [TRT] Domain:           
+[08/02/2021-15:12:04] [I] [TRT] Model version:    0
+[08/02/2021-15:12:04] [I] [TRT] Doc string:       
+[08/02/2021-15:12:04] [I] [TRT] ----------------------------------------------------------------
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::GridAnchor_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::GridAnchorRect_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::NMS_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::Reorg_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::Region_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::Clip_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::LReLU_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::PriorBox_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::Normalize_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::ScatterND version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::RPROI_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::BatchedNMS_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::BatchedNMSDynamic_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::FlattenConcat_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::CropAndResize version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::DetectionLayer_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::EfficientNMS_ONNX_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::EfficientNMS_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::Proposal version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::ProposalLayer_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::PyramidROIAlign_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::ResizeNearest_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::Split version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::SpecialSlice_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Plugin creator already registered - ::InstanceNormalization_TRT version 1
+[08/02/2021-15:12:06] [V] [TRT] Adding network input: images with dtype: float32, dimensions: (1, 3, 1080, 1440)
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: images for ONNX tensor: images
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer1.0.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer1.0.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer1.0.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer1.0.downsample.0.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer1.1.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer1.1.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer1.1.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer1.2.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer1.2.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer1.2.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer2.0.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer2.0.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer2.0.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer2.0.downsample.0.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer2.1.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer2.1.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer2.1.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer2.2.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer2.2.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer2.2.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer2.3.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer2.3.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer2.3.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.0.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.0.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.0.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.0.downsample.0.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.1.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.1.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.1.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.2.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.2.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.2.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.3.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.3.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.3.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.4.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.4.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.4.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.5.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.5.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer3.5.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer4.0.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer4.0.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer4.0.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer4.0.downsample.0.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer4.1.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer4.1.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer4.1.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer4.2.conv1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer4.2.conv2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.body.layer4.2.conv3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.inner_blocks.0.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.inner_blocks.0.bias
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.inner_blocks.1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.inner_blocks.1.bias
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.inner_blocks.2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.inner_blocks.2.bias
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.inner_blocks.3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.inner_blocks.3.bias
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.layer_blocks.0.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.layer_blocks.0.bias
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.layer_blocks.1.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.layer_blocks.1.bias
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.layer_blocks.2.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.layer_blocks.2.bias
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.layer_blocks.3.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: backbone.fpn.layer_blocks.3.bias
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: rpn.head.conv.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: rpn.head.conv.bias
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: rpn.head.cls_logits.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: rpn.head.cls_logits.bias
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: rpn.head.bbox_pred.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: rpn.head.bbox_pred.bias
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: roi_heads.box_head.fc6.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: roi_heads.box_head.fc6.bias
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: roi_heads.box_head.fc7.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: roi_heads.box_head.fc7.bias
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: roi_heads.box_predictor.cls_score.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: roi_heads.box_predictor.cls_score.bias
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: roi_heads.box_predictor.bbox_pred.weight
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: roi_heads.box_predictor.bbox_pred.bias
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3225
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3226
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3227
+[08/02/2021-15:12:06] [W] [TRT] onnx2trt_utils.cpp:364: Your ONNX model has been generated with INT64 weights, while TensorRT does not natively support INT64. Attempting to cast down to INT32.
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3228
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3229
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3230
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3231
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3232
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3233
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3241
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3243
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3251
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3253
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3261
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3263
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3271
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3273
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3281
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3283
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3291
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3293
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3301
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3303
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3311
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3313
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3321
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3323
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3331
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3333
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3341
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3343
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3351
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3353
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3361
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3363
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3371
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3373
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3381
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3383
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3391
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3393
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3401
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3403
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3411
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3413
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3421
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3423
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3431
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3433
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3441
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3443
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3451
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3453
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3461
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3463
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3471
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3473
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3481
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3483
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3491
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3493
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3501
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3503
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3511
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3513
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3521
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3523
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3531
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3533
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3541
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3543
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3551
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3553
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3561
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3563
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3571
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3573
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3581
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3583
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3591
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3593
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3601
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3603
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3611
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3613
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3621
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3623
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3631
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3633
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3641
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3643
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3651
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3653
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3661
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3663
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3671
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3673
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3681
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3683
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3691
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3693
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3701
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3703
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3711
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3713
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3721
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3723
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3731
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3733
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3741
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3743
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3751
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3753
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3761
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3763
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3764
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3765
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3766
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3767
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3768
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3769
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3770
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3771
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3772
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3773
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3774
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3775
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3776
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3777
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3778
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3779
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3780
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3781
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3782
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3783
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3784
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3785
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3786
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3787
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3788
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3789
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3790
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3791
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3792
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3793
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3794
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3795
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3796
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3797
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3798
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3799
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3800
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3801
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3802
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3803
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3804
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3805
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3806
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3807
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3808
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3809
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3810
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3811
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3812
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3813
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3814
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3816
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3818
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3819
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3820
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3821
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3822
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3823
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3824
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3825
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3826
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3827
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3829
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3831
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3832
+[08/02/2021-15:12:06] [V] [TRT] Importing initializer: 3833
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Split_0 [Split]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: images
+[08/02/2021-15:12:06] [V] [TRT] Split_0 [Split] inputs: [images -> (1, 3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Split_0 for ONNX node: Split_0
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 296 for ONNX tensor: 296
+[08/02/2021-15:12:06] [V] [TRT] Split_0 [Split] outputs: [296 -> (1, 3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Squeeze_1 [Squeeze]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 296
+[08/02/2021-15:12:06] [V] [TRT] Squeeze_1 [Squeeze] inputs: [296 -> (1, 3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Original shape: (1, 3, 1080, 1440), squeezing to: (3, 1080, 1440)
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Squeeze_1 for ONNX node: Squeeze_1
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 297 for ONNX tensor: 297
+[08/02/2021-15:12:06] [V] [TRT] Squeeze_1 [Squeeze] outputs: [297 -> (3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Shape_2 [Shape]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 297
+[08/02/2021-15:12:06] [V] [TRT] Shape_2 [Shape] inputs: [297 -> (3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Shape_2 for ONNX node: Shape_2
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 298 for ONNX tensor: 298
+[08/02/2021-15:12:06] [V] [TRT] Shape_2 [Shape] outputs: [298 -> (3)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_3 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_3 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_3 [Constant] outputs: [299 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Gather_4 [Gather]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 298
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 299
+[08/02/2021-15:12:06] [V] [TRT] Gather_4 [Gather] inputs: [298 -> (3)[INT32]], [299 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: 299 for ONNX node: 299
+[08/02/2021-15:12:06] [V] [TRT] Using Gather axis: 0
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Gather_4 for ONNX node: Gather_4
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 300 for ONNX tensor: 300
+[08/02/2021-15:12:06] [V] [TRT] Gather_4 [Gather] outputs: [300 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Shape_5 [Shape]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 297
+[08/02/2021-15:12:06] [V] [TRT] Shape_5 [Shape] inputs: [297 -> (3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Shape_5 for ONNX node: Shape_5
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 301 for ONNX tensor: 301
+[08/02/2021-15:12:06] [V] [TRT] Shape_5 [Shape] outputs: [301 -> (3)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_6 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_6 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_6 [Constant] outputs: [302 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Gather_7 [Gather]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 301
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 302
+[08/02/2021-15:12:06] [V] [TRT] Gather_7 [Gather] inputs: [301 -> (3)[INT32]], [302 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: 302 for ONNX node: 302
+[08/02/2021-15:12:06] [V] [TRT] Using Gather axis: 0
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Gather_7 for ONNX node: Gather_7
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 303 for ONNX tensor: 303
+[08/02/2021-15:12:06] [V] [TRT] Gather_7 [Gather] outputs: [303 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Split_8 [Split]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: images
+[08/02/2021-15:12:06] [V] [TRT] Split_8 [Split] inputs: [images -> (1, 3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Split_8 for ONNX node: Split_8
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 304 for ONNX tensor: 304
+[08/02/2021-15:12:06] [V] [TRT] Split_8 [Split] outputs: [304 -> (1, 3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Squeeze_9 [Squeeze]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 304
+[08/02/2021-15:12:06] [V] [TRT] Squeeze_9 [Squeeze] inputs: [304 -> (1, 3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Original shape: (1, 3, 1080, 1440), squeezing to: (3, 1080, 1440)
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Squeeze_9 for ONNX node: Squeeze_9
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 305 for ONNX tensor: 305
+[08/02/2021-15:12:06] [V] [TRT] Squeeze_9 [Squeeze] outputs: [305 -> (3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_10 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_10 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_10 [Constant] outputs: [306 -> (3, 1, 1)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Sub_11 [Sub]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 305
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 306
+[08/02/2021-15:12:06] [V] [TRT] Sub_11 [Sub] inputs: [305 -> (3, 1080, 1440)[FLOAT]], [306 -> (3, 1, 1)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: 306 for ONNX node: 306
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Sub_11 for ONNX node: Sub_11
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 307 for ONNX tensor: 307
+[08/02/2021-15:12:06] [V] [TRT] Sub_11 [Sub] outputs: [307 -> (3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_12 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_12 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_12 [Constant] outputs: [308 -> (3, 1, 1)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Div_13 [Div]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 307
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 308
+[08/02/2021-15:12:06] [V] [TRT] Div_13 [Div] inputs: [307 -> (3, 1080, 1440)[FLOAT]], [308 -> (3, 1, 1)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: 308 for ONNX node: 308
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Div_13 for ONNX node: Div_13
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 309 for ONNX tensor: 309
+[08/02/2021-15:12:06] [V] [TRT] Div_13 [Div] outputs: [309 -> (3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Shape_14 [Shape]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 309
+[08/02/2021-15:12:06] [V] [TRT] Shape_14 [Shape] inputs: [309 -> (3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Shape_14 for ONNX node: Shape_14
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 310 for ONNX tensor: 310
+[08/02/2021-15:12:06] [V] [TRT] Shape_14 [Shape] outputs: [310 -> (3)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_15 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_15 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_15 [Constant] outputs: [311 -> (1)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_16 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_16 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_16 [Constant] outputs: [312 -> (1)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_17 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_17 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Weight at index 0: 9223372036854775807 is out of range. Clamping to: 2147483647
+[08/02/2021-15:12:06] [W] [TRT] onnx2trt_utils.cpp:390: One or more weights outside the range of INT32 was clamped
+[08/02/2021-15:12:06] [V] [TRT] Constant_17 [Constant] outputs: [313 -> (1)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_18 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_18 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_18 [Constant] outputs: [314 -> (1)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Slice_19 [Slice]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 310
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 312
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 313
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 311
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 314
+[08/02/2021-15:12:06] [V] [TRT] Slice_19 [Slice] inputs: [310 -> (3)[INT32]], [312 -> (1)[INT32]], [313 -> (1)[INT32]], [311 -> (1)[INT32]], [314 -> (1)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Slice_19 for ONNX node: Slice_19
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 315 for ONNX tensor: 315
+[08/02/2021-15:12:06] [V] [TRT] Slice_19 [Slice] outputs: [315 -> (2)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: ReduceMin_20 [ReduceMin]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 315
+[08/02/2021-15:12:06] [V] [TRT] ReduceMin_20 [ReduceMin] inputs: [315 -> (2)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: ReduceMin_20 for ONNX node: ReduceMin_20
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 316 for ONNX tensor: 316
+[08/02/2021-15:12:06] [V] [TRT] ReduceMin_20 [ReduceMin] outputs: [316 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Cast_21 [Cast]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 316
+[08/02/2021-15:12:06] [V] [TRT] Cast_21 [Cast] inputs: [316 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Casting to type: float32
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Cast_21 for ONNX node: Cast_21
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 317 for ONNX tensor: 317
+[08/02/2021-15:12:06] [V] [TRT] Cast_21 [Cast] outputs: [317 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: ReduceMax_22 [ReduceMax]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 315
+[08/02/2021-15:12:06] [V] [TRT] ReduceMax_22 [ReduceMax] inputs: [315 -> (2)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: ReduceMax_22 for ONNX node: ReduceMax_22
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 318 for ONNX tensor: 318
+[08/02/2021-15:12:06] [V] [TRT] ReduceMax_22 [ReduceMax] outputs: [318 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Cast_23 [Cast]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 318
+[08/02/2021-15:12:06] [V] [TRT] Cast_23 [Cast] inputs: [318 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Casting to type: float32
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Cast_23 for ONNX node: Cast_23
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 319 for ONNX tensor: 319
+[08/02/2021-15:12:06] [V] [TRT] Cast_23 [Cast] outputs: [319 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_24 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_24 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_24 [Constant] outputs: [320 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Div_25 [Div]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 320
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 317
+[08/02/2021-15:12:06] [V] [TRT] Div_25 [Div] inputs: [320 -> ()[FLOAT]], [317 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: 320 for ONNX node: 320
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Div_25 for ONNX node: Div_25
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 321 for ONNX tensor: 321
+[08/02/2021-15:12:06] [V] [TRT] Div_25 [Div] outputs: [321 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_26 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_26 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_26 [Constant] outputs: [322 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Mul_27 [Mul]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 321
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 322
+[08/02/2021-15:12:06] [V] [TRT] Mul_27 [Mul] inputs: [321 -> ()[FLOAT]], [322 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: 322 for ONNX node: 322
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Mul_27 for ONNX node: Mul_27
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 323 for ONNX tensor: 323
+[08/02/2021-15:12:06] [V] [TRT] Mul_27 [Mul] outputs: [323 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_28 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_28 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_28 [Constant] outputs: [324 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Div_29 [Div]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 324
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 319
+[08/02/2021-15:12:06] [V] [TRT] Div_29 [Div] inputs: [324 -> ()[FLOAT]], [319 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: 324 for ONNX node: 324
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Div_29 for ONNX node: Div_29
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 325 for ONNX tensor: 325
+[08/02/2021-15:12:06] [V] [TRT] Div_29 [Div] outputs: [325 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_30 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_30 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_30 [Constant] outputs: [326 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Mul_31 [Mul]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 325
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 326
+[08/02/2021-15:12:06] [V] [TRT] Mul_31 [Mul] inputs: [325 -> ()[FLOAT]], [326 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: 326 for ONNX node: 326
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Mul_31 for ONNX node: Mul_31
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 327 for ONNX tensor: 327
+[08/02/2021-15:12:06] [V] [TRT] Mul_31 [Mul] outputs: [327 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Min_32 [Min]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 323
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 327
+[08/02/2021-15:12:06] [V] [TRT] Min_32 [Min] inputs: [323 -> ()[FLOAT]], [327 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Min_32 for ONNX node: Min_32
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 328 for ONNX tensor: 328
+[08/02/2021-15:12:06] [V] [TRT] Min_32 [Min] outputs: [328 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Unsqueeze_33 [Unsqueeze]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 309
+[08/02/2021-15:12:06] [V] [TRT] Unsqueeze_33 [Unsqueeze] inputs: [309 -> (3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Original shape: (3, 1080, 1440), unsqueezing to: (1, 3, 1080, 1440)
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Unsqueeze_33 for ONNX node: Unsqueeze_33
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 329 for ONNX tensor: 329
+[08/02/2021-15:12:06] [V] [TRT] Unsqueeze_33 [Unsqueeze] outputs: [329 -> (1, 3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Shape_34 [Shape]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 329
+[08/02/2021-15:12:06] [V] [TRT] Shape_34 [Shape] inputs: [329 -> (1, 3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Shape_34 for ONNX node: Shape_34
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 330 for ONNX tensor: 330
+[08/02/2021-15:12:06] [V] [TRT] Shape_34 [Shape] outputs: [330 -> (4)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_35 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_35 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_35 [Constant] outputs: [331 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Gather_36 [Gather]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 330
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 331
+[08/02/2021-15:12:06] [V] [TRT] Gather_36 [Gather] inputs: [330 -> (4)[INT32]], [331 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: 331 for ONNX node: 331
+[08/02/2021-15:12:06] [V] [TRT] Using Gather axis: 0
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Gather_36 for ONNX node: Gather_36
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 332 for ONNX tensor: 332
+[08/02/2021-15:12:06] [V] [TRT] Gather_36 [Gather] outputs: [332 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Cast_37 [Cast]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 332
+[08/02/2021-15:12:06] [V] [TRT] Cast_37 [Cast] inputs: [332 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Casting to type: float32
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Cast_37 for ONNX node: Cast_37
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 333 for ONNX tensor: 333
+[08/02/2021-15:12:06] [V] [TRT] Cast_37 [Cast] outputs: [333 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Cast_38 [Cast]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 328
+[08/02/2021-15:12:06] [V] [TRT] Cast_38 [Cast] inputs: [328 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Casting to type: float32
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Cast_38 for ONNX node: Cast_38
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 334 for ONNX tensor: 334
+[08/02/2021-15:12:06] [V] [TRT] Cast_38 [Cast] outputs: [334 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Mul_39 [Mul]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 333
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 334
+[08/02/2021-15:12:06] [V] [TRT] Mul_39 [Mul] inputs: [333 -> ()[FLOAT]], [334 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Mul_39 for ONNX node: Mul_39
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 335 for ONNX tensor: 335
+[08/02/2021-15:12:06] [V] [TRT] Mul_39 [Mul] outputs: [335 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Cast_40 [Cast]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 335
+[08/02/2021-15:12:06] [V] [TRT] Cast_40 [Cast] inputs: [335 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Casting to type: float32
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Cast_40 for ONNX node: Cast_40
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 336 for ONNX tensor: 336
+[08/02/2021-15:12:06] [V] [TRT] Cast_40 [Cast] outputs: [336 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Floor_41 [Floor]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 336
+[08/02/2021-15:12:06] [V] [TRT] Floor_41 [Floor] inputs: [336 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Original shape: (), unsqueezing to: (1,)
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Floor_41 for ONNX node: Floor_41
+[08/02/2021-15:12:06] [V] [TRT] Original shape: (1,), squeezing to: ()
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 337 for ONNX tensor: 337
+[08/02/2021-15:12:06] [V] [TRT] Floor_41 [Floor] outputs: [337 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Shape_42 [Shape]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 329
+[08/02/2021-15:12:06] [V] [TRT] Shape_42 [Shape] inputs: [329 -> (1, 3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Shape_42 for ONNX node: Shape_42
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 338 for ONNX tensor: 338
+[08/02/2021-15:12:06] [V] [TRT] Shape_42 [Shape] outputs: [338 -> (4)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_43 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_43 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_43 [Constant] outputs: [339 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Gather_44 [Gather]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 338
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 339
+[08/02/2021-15:12:06] [V] [TRT] Gather_44 [Gather] inputs: [338 -> (4)[INT32]], [339 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: 339 for ONNX node: 339
+[08/02/2021-15:12:06] [V] [TRT] Using Gather axis: 0
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Gather_44 for ONNX node: Gather_44
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 340 for ONNX tensor: 340
+[08/02/2021-15:12:06] [V] [TRT] Gather_44 [Gather] outputs: [340 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Cast_45 [Cast]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 340
+[08/02/2021-15:12:06] [V] [TRT] Cast_45 [Cast] inputs: [340 -> ()[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Casting to type: float32
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Cast_45 for ONNX node: Cast_45
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 341 for ONNX tensor: 341
+[08/02/2021-15:12:06] [V] [TRT] Cast_45 [Cast] outputs: [341 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Cast_46 [Cast]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 328
+[08/02/2021-15:12:06] [V] [TRT] Cast_46 [Cast] inputs: [328 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Casting to type: float32
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Cast_46 for ONNX node: Cast_46
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 342 for ONNX tensor: 342
+[08/02/2021-15:12:06] [V] [TRT] Cast_46 [Cast] outputs: [342 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Mul_47 [Mul]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 341
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 342
+[08/02/2021-15:12:06] [V] [TRT] Mul_47 [Mul] inputs: [341 -> ()[FLOAT]], [342 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Mul_47 for ONNX node: Mul_47
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 343 for ONNX tensor: 343
+[08/02/2021-15:12:06] [V] [TRT] Mul_47 [Mul] outputs: [343 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Cast_48 [Cast]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 343
+[08/02/2021-15:12:06] [V] [TRT] Cast_48 [Cast] inputs: [343 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Casting to type: float32
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Cast_48 for ONNX node: Cast_48
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 344 for ONNX tensor: 344
+[08/02/2021-15:12:06] [V] [TRT] Cast_48 [Cast] outputs: [344 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Floor_49 [Floor]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 344
+[08/02/2021-15:12:06] [V] [TRT] Floor_49 [Floor] inputs: [344 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Original shape: (), unsqueezing to: (1,)
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Floor_49 for ONNX node: Floor_49
+[08/02/2021-15:12:06] [V] [TRT] Original shape: (1,), squeezing to: ()
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 345 for ONNX tensor: 345
+[08/02/2021-15:12:06] [V] [TRT] Floor_49 [Floor] outputs: [345 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Unsqueeze_50 [Unsqueeze]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 337
+[08/02/2021-15:12:06] [V] [TRT] Unsqueeze_50 [Unsqueeze] inputs: [337 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Original shape: (), unsqueezing to: (1,)
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Unsqueeze_50 for ONNX node: Unsqueeze_50
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 346 for ONNX tensor: 346
+[08/02/2021-15:12:06] [V] [TRT] Unsqueeze_50 [Unsqueeze] outputs: [346 -> (1)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Unsqueeze_51 [Unsqueeze]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 345
+[08/02/2021-15:12:06] [V] [TRT] Unsqueeze_51 [Unsqueeze] inputs: [345 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Original shape: (), unsqueezing to: (1,)
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Unsqueeze_51 for ONNX node: Unsqueeze_51
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 347 for ONNX tensor: 347
+[08/02/2021-15:12:06] [V] [TRT] Unsqueeze_51 [Unsqueeze] outputs: [347 -> (1)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Concat_52 [Concat]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 346
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 347
+[08/02/2021-15:12:06] [V] [TRT] Concat_52 [Concat] inputs: [346 -> (1)[FLOAT]], [347 -> (1)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Concat_52 for ONNX node: Concat_52
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 348 for ONNX tensor: 348
+[08/02/2021-15:12:06] [V] [TRT] Concat_52 [Concat] outputs: [348 -> (2)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Shape_53 [Shape]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 329
+[08/02/2021-15:12:06] [V] [TRT] Shape_53 [Shape] inputs: [329 -> (1, 3, 1080, 1440)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Shape_53 for ONNX node: Shape_53
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 349 for ONNX tensor: 349
+[08/02/2021-15:12:06] [V] [TRT] Shape_53 [Shape] outputs: [349 -> (4)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_54 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_54 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_54 [Constant] outputs: [350 -> (1)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_55 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_55 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_55 [Constant] outputs: [351 -> (1)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_56 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_56 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_56 [Constant] outputs: [352 -> (1)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Slice_57 [Slice]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 349
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 351
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 352
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 350
+[08/02/2021-15:12:06] [V] [TRT] Slice_57 [Slice] inputs: [349 -> (4)[INT32]], [351 -> (1)[INT32]], [352 -> (1)[INT32]], [350 -> (1)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Slice_57 for ONNX node: Slice_57
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 353 for ONNX tensor: 353
+[08/02/2021-15:12:06] [V] [TRT] Slice_57 [Slice] outputs: [353 -> (2)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Cast_58 [Cast]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 348
+[08/02/2021-15:12:06] [V] [TRT] Cast_58 [Cast] inputs: [348 -> (2)[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Casting to type: int32
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Cast_58 for ONNX node: Cast_58
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 354 for ONNX tensor: 354
+[08/02/2021-15:12:06] [V] [TRT] Cast_58 [Cast] outputs: [354 -> (2)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Concat_59 [Concat]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 353
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 354
+[08/02/2021-15:12:06] [V] [TRT] Concat_59 [Concat] inputs: [353 -> (2)[INT32]], [354 -> (2)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Concat_59 for ONNX node: Concat_59
+[08/02/2021-15:12:06] [V] [TRT] Registering tensor: 355 for ONNX tensor: 355
+[08/02/2021-15:12:06] [V] [TRT] Concat_59 [Concat] outputs: [355 -> (4)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_60 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_60 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_60 [Constant] outputs: [356 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Constant_61 [Constant]
+[08/02/2021-15:12:06] [V] [TRT] Constant_61 [Constant] inputs: 
+[08/02/2021-15:12:06] [V] [TRT] Constant_61 [Constant] outputs: [357 -> ()[FLOAT]], 
+[08/02/2021-15:12:06] [V] [TRT] Parsing node: Resize_62 [Resize]
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 329
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 356
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 357
+[08/02/2021-15:12:06] [V] [TRT] Searching for input: 355
+[08/02/2021-15:12:06] [V] [TRT] Resize_62 [Resize] inputs: [329 -> (1, 3, 1080, 1440)[FLOAT]], [356 -> ()[FLOAT]], [357 -> ()[FLOAT]], [355 -> (4)[INT32]], 
+[08/02/2021-15:12:06] [V] [TRT] Registering layer: Resize_62 for ONNX node: Resize_62
+[08/02/2021-15:12:06] [E] Error[9]: [graph.cpp::computeInputExecutionUses::519] Error Code 9: Internal Error (Floor_49: IUnaryLayer cannot be used to compute a shape tensor)
+[08/02/2021-15:12:06] [E] [TRT] ModelImporter.cpp:720: While parsing node number 62 [Resize -> "358"]:
+[08/02/2021-15:12:06] [E] [TRT] ModelImporter.cpp:721: --- Begin node ---
+[08/02/2021-15:12:06] [E] [TRT] ModelImporter.cpp:722: input: "329"
+input: "356"
+input: "357"
+input: "355"
+output: "358"
+name: "Resize_62"
+op_type: "Resize"
+attribute {
+  name: "coordinate_transformation_mode"
+  s: "pytorch_half_pixel"
+  type: STRING
+}
+attribute {
+  name: "cubic_coeff_a"
+  f: -0.75
+  type: FLOAT
+}
+attribute {
+  name: "mode"
+  s: "linear"
+  type: STRING
+}
+attribute {
+  name: "nearest_mode"
+  s: "floor"
+  type: STRING
+}
+
+[08/02/2021-15:12:06] [E] [TRT] ModelImporter.cpp:723: --- End node ---
+[08/02/2021-15:12:06] [E] [TRT] ModelImporter.cpp:726: ERROR: ModelImporter.cpp:179 In function parseGraph:
+[6] Invalid Node - Resize_62
+[graph.cpp::computeInputExecutionUses::519] Error Code 9: Internal Error (Floor_49: IUnaryLayer cannot be used to compute a shape tensor)
+[08/02/2021-15:12:06] [E] Failed to parse onnx file
+[08/02/2021-15:12:06] [I] Finish parsing network model
+[08/02/2021-15:12:06] [E] Parsing model failed
+[08/02/2021-15:12:06] [E] Engine creation failed
+[08/02/2021-15:12:06] [E] Engine set up failed
+&&&& FAILED TensorRT.trtexec [TensorRT v8001] # ./trtexec --onnx=/future/u/alexder/faster-rcnn/trt_port/faster_rcnn.onnx --verbose
